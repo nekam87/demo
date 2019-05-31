@@ -1,0 +1,36 @@
+OS GUIDE - Java and Maven - Setting Environment Variables
+
+Editor to set enviroment variables:
+•	emacs .profile
+•	nano .profile
+•	vim .profile
+
+Maven:
+•	Download Maven.
+•	Unzip Maven
+•	Moovie apache-maven-3.6.1 to usr with command prompt:  
+mv apache-maven-3.6.1 /usr/local/apache-maven/apache-maven-3.6.1
+
+Setting environment variables
+
+launch the command prompt:
+
+ emacs .profile
+
+Copy and Past the following setting:
+
+export M2_HOME=/usr/local/apache-maven/apache-maven-3.6.1
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home
+export PATH=$JAVA_HOME/bin:$M2_HOME/bin:$PATH
+
+try the following command prompt:
+
+echo $JAVA_HOME 
+echo $M2_HOME 
+
+to check if the environment variables are setted correctly
+
+if you have some permission problem with mvn command, then you have to set the execute permission inside your usr folder:
+
+chmod a+x /usr/local/apache-maven/apache-maven-3.6.1/bin/mvn
+

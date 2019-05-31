@@ -142,7 +142,7 @@
                             <goal>exec</goal>
                         </goals>
                         <configuration>
-                            <executable>${project.basedir}/../script/executeGrunt.sh</executable>
+                            <executable>${project.basedir}/../executeGrunt/executeGrunt.sh</executable>
                         </configuration>
                     </execution>
                 </executions>
