@@ -131,11 +131,12 @@
                 </configuration>
             </plugin>
 
+<!--
             <plugin>
                 <artifactId>exec-maven-plugin</artifactId>
                 <groupId>org.codehaus.mojo</groupId>
                 <executions>
-                    <execution><!-- Run our version calculation script -->
+                    <execution>
                         <id>Scss Compilation</id>
                         <phase>generate-sources</phase>
                         <goals>
@@ -147,7 +148,7 @@
                     </execution>
                 </executions>
             </plugin>
-
+-->
 
             <!-- SASS compile -->
 <!--
