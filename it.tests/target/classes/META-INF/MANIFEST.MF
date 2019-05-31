@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1559048424580
+Bnd-LastModified: 1559298473801
 Build-Jdk: 1.8.0_201
 Built-By: daperrotta
 Bundle-Description: Bundles for Integration Tests for demo
