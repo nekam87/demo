@@ -1,0 +1,7 @@
+demo/core/schedulers/SimpleScheduledTask.class
+demo/core/filters/LoggingFilter.class
+demo/core/servlets/SimpleServlet.class
+demo/core/models/HelloWorldModel.class
+demo/core/package-info.class
+demo/core/listeners/SimpleResourceListener.class
+demo/core/schedulers/SimpleScheduledTask$Config.class

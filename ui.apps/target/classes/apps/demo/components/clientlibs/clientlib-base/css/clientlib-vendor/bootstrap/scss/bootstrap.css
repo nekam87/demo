@@ -1,0 +1,71 @@
+/*
+Syntax error: Invalid CSS after "  @each $key": expected "in", was ", $num in $map {"
+        on line 10 of /Users/daperrotta/Documents/ws/demo/ui.apps/src/main/content/jcr_root/apps/demo/components/clientlibs/clientlib-vendor/bootstrap/scss/_functions.scss
+        from line 8 of /Users/daperrotta/Documents/ws/demo/ui.apps/src/main/content/jcr_root/apps/demo/components/clientlibs/clientlib-vendor/bootstrap/scss/bootstrap.scss
+
+5: // Ascending
+6: // Used to evaluate Sass maps like our grid breakpoints.
+7: @mixin _assert-ascending($map, $map-name) {
+8:   $prev-key: null;
+9:   $prev-num: null;
+10:   @each $key, $num in $map {
+11:     @if $prev-num == null or unit($num) == "%" {
+12:       // Do nothing
+13:     } @else if not comparable($prev-num, $num) {
+14:       @warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+15:     } @else if $prev-num >= $num {
+
+Backtrace:
+/Users/daperrotta/Documents/ws/demo/ui.apps/src/main/content/jcr_root/apps/demo/components/clientlibs/clientlib-vendor/bootstrap/scss/_functions.scss:10
+/Users/daperrotta/Documents/ws/demo/ui.apps/src/main/content/jcr_root/apps/demo/components/clientlibs/clientlib-vendor/bootstrap/scss/bootstrap.scss:8
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/scss/parser.rb:1147:in `expected'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/scss/parser.rb:1084:in `expected'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/scss/parser.rb:1079:in `tok!'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/scss/parser.rb:249:in `each_directive'
+org/jruby/RubyKernel.java:2105:in `send'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/scss/parser.rb:175:in `special_directive'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/scss/parser.rb:147:in `directive'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/scss/parser.rb:554:in `block_child'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/scss/parser.rb:546:in `block_contents'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/scss/parser.rb:535:in `block'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/scss/parser.rb:187:in `mixin_directive'
+org/jruby/RubyKernel.java:2105:in `send'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/scss/parser.rb:175:in `special_directive'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/scss/parser.rb:147:in `directive'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/scss/parser.rb:553:in `block_child'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/scss/parser.rb:543:in `block_contents'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/scss/parser.rb:82:in `stylesheet'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/scss/parser.rb:27:in `parse'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/engine.rb:342:in `_to_tree'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/engine.rb:272:in `to_tree'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/tree/visitors/perform.rb:225:in `visit_import'
+org/jruby/RubyKernel.java:2109:in `send'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/tree/visitors/base.rb:37:in `visit'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/tree/visitors/perform.rb:100:in `visit'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+org/jruby/RubyArray.java:2339:in `collect'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/tree/visitors/perform.rb:109:in `visit_children'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/tree/visitors/base.rb:37:in `visit'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+org/jruby/RubyKernel.java:2109:in `send'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/tree/visitors/base.rb:37:in `visit'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/tree/visitors/perform.rb:100:in `visit'
+org/jruby/RubyKernel.java:2109:in `send'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/tree/visitors/perform.rb:7:in `visit'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/tree/root_node.rb:20:in `render'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/engine.rb:315:in `_render'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/engine.rb:262:in `render'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/plugin/compiler.rb:341:in `update_stylesheet'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/plugin/compiler.rb:203:in `update_stylesheets'
+org/jruby/RubyArray.java:1620:in `each'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+file:/Users/daperrotta/.m2/repository/org/jasig/maven/sass-maven-plugin/1.1.1/sass-maven-plugin-1.1.1.jar!/gems/sass-3.2.8/lib/sass/plugin.rb:81:in `update_stylesheets'
+<script>:25:in `(root)'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"  @each $key\": expected \"in\", was \", $num in $map {\"\A         on line 10 of /Users/daperrotta/Documents/ws/demo/ui.apps/src/main/content/jcr_root/apps/demo/components/clientlibs/clientlib-vendor/bootstrap/scss/_functions.scss\A         from line 8 of /Users/daperrotta/Documents/ws/demo/ui.apps/src/main/content/jcr_root/apps/demo/components/clientlibs/clientlib-vendor/bootstrap/scss/bootstrap.scss\A \A 5: // Ascending\A 6: // Used to evaluate Sass maps like our grid breakpoints.\A 7: @mixin _assert-ascending($map, $map-name) {\A 8:   $prev-key: null;\A 9:   $prev-num: null;\A 10:   @each $key, $num in $map {\A 11:     @if $prev-num == null or unit($num) == \"%\" {\A 12:       // Do nothing\A 13:     } @else if not comparable($prev-num, $num) {\A 14:       @warn \"Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !\";\A 15:     } @else if $prev-num >= $num {"; }
